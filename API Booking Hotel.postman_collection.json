@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "06c7c9f5-f362-4c66-8439-54544ccd0070",
+		"name": "API Booking Hotel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25551078"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-token",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nama",
+							"value": "Pak Amir",
+							"description": "Pak Tamu | Pak Amir",
+							"type": "text"
+						},
+						{
+							"key": "no_hp",
+							"value": "6283811345678",
+							"description": "6282141212322 | 6283811345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Booking",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtYSI6IlBhayBUYW11Iiwibm9faHAiOiI2MjgyMTQxMjEyMzIyIiwic2FsZXNfY29kZSI6IlNMUy0wMDMiLCJpYXQiOjE2ODY2NTA4MjJ9.aY7AcVpABOaXwD0XdGlFmCXD-uPXnA-1diLec5G1i84",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "kamar_id",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "sales_code",
+							"value": "SLS-002",
+							"type": "text"
+						},
+						{
+							"key": "tanggal_check_in",
+							"value": "2023-06-13",
+							"type": "text"
+						},
+						{
+							"key": "tanggal_check_out",
+							"value": "2023-06-14",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/booking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Booking List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/booking/booking-list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"booking",
+						"booking-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Penghasilan Pak Amir",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6IlBhayBBbWlyIiwibm9faHAiOiI2MjgzODExMzQ1Njc4Iiwic2FsZXNfY29kZSI6IlNMUy0wMDEiLCJpYXQiOjE2ODY2NTEwMjZ9.yqN2tqIMcmeYPOvdrtXF9W8PpfRzqCIfiNHYC6zSShE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/user/penghasilan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"user",
+						"penghasilan"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
